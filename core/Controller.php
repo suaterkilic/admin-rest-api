@@ -7,16 +7,6 @@ class Controller
 	
 	public function view()
 	{
-		$data = func_get_args();
-
-		if($data[0] == '/')
-		{
-			$data[0] = 'index';
-		}
-
-		$pageName = $data[0];
-		unset($data[0]);
-
 		require 'app/views/'. $pageName. '.php';
 	}
 
